@@ -1,0 +1,15 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: win_apdn7
+  namespace: default
+  annotations:
+    vmoperator.vmware.com/image-supported-check: disable
+spec:
+  className: best-effort-large
+  #http or https location of OVA without the prefix:
+  imageName: storage.googleapis.com/bucket-ecs-jp/WIN_APDN7.ova
+  powerState: poweredOn
+  networkInterfaces:
+  - networkName: "VM Network"
+    ethernetCardType: "vmxnet3"
