@@ -8,7 +8,7 @@ metadata:
 spec:
   className: best-effort-large
   #http or https location of OVA without the prefix:
-  imageName: storage.googleapis.com/bucket-ecs-jp/WIN2022_APDN7.ova
+  imageName: storage.googleapis.com/bucket-ecs-jp/WIN2022_APDN7-1.ova
   powerState: poweredOn
   vmMetadata:
     secretName: sysprep-bootstrap-data
