@@ -1,14 +1,14 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: win2022-apdn7
+  name: win2022-apdn7-1
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: best-effort-large
   #http or https location of OVA without the prefix:
-  imageName: storage.googleapis.com/bucket-ecs-jp/WIN_APDN7.ova
+  imageName: storage.googleapis.com/bucket-ecs-jp/WIN2022_APDN7.ova
   powerState: poweredOn
   vmMetadata:
     secretName: sysprep-bootstrap-data
@@ -30,7 +30,7 @@ stringData:
       <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <UserAccounts>
           <AdministratorPassword>
-            <Value>VMware1!</Value>
+            <Value>VMware123!</Value>
             <PlainText>true</PlainText>
           </AdministratorPassword>
           <LocalAccounts>
